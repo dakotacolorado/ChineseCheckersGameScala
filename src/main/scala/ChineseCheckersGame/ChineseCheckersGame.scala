@@ -4,7 +4,7 @@ import ChineseCheckersGame.GameState.GameState
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D
 
 class ChineseCheckersGame(numberOfPlayers: Int) {
-  require(1 < numberOfPlayers & numberOfPlayers < 7)
+  require(1 < numberOfPlayers & numberOfPlayers < 7 & numberOfPlayers != 5)
 
   /**
    * Depending on the amount of players a different subset of starting positions will be used.
@@ -13,7 +13,6 @@ class ChineseCheckersGame(numberOfPlayers: Int) {
     2 -> List(1,4),
     3 -> List(1, 3, 5),
     4 -> List(1, 2, 4, 5),
-    5 -> List(1, 2, 3, 4, 5),
     6 -> List(1, 2, 3, 4, 5, 6)
   )
 
@@ -29,6 +28,10 @@ class ChineseCheckersGame(numberOfPlayers: Int) {
   }
 
   def getWinningState(playerIndex: Int): Any = {
+
+  }
+
+  def getCurrentState(): String = {
 
   }
 

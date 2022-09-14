@@ -1,5 +1,3 @@
 package ChineseCheckersGame.GameState
 
-class Player {
-
-}
+class Player(positions: List[Position]) {}
