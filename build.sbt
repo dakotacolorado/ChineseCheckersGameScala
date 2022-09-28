@@ -11,6 +11,7 @@ lazy val root = (project in file("."))
       "org.scalactic"     %%  "scalactic"       % ScalaTestVersion,
       "org.scalatest"     %%  "scalatest"       % ScalaTestVersion  % "test",
       "org.apache.spark"  %   "spark-core_2.13" % SparkVersion      % "provided",
+      "com.google.inject" %   "guice"           % "5.1.0"
     ),
     resolvers ++= Seq (
       "MavenRepository" at "https://mvnrepository.com/", // spark

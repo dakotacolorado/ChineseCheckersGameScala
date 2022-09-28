@@ -5,7 +5,7 @@ import org.scalatest.wordspec.AnyWordSpec
 
 class ChineseCheckersGameSpec extends AnyWordSpec with GivenWhenThen  {
   "a chinese checkers game" should {
-    "start with "
+
 
   }
 

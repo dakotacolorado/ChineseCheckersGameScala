@@ -1,19 +1,19 @@
-package RuleEngine
+package Common
+
 /**
- * <h1><code>Vector2D</code></h1>
- * Description: <a href="https://en.wikipedia.org/wiki/Euclidean_vector">Euclidean Vector</a> of size 2.
+ * <h1><code>ShortVector2D</code></h1>
+ * Description: <a href="https://en.wikipedia.org/wiki/Euclidean_vector">Euclidean Vector</a> of size 2 with Short values.
  *
  * @author Dakota Parker
- * @deprecated
  */
-class Vector2DArchive(val i: Int, val j: Int) {
+class ShortVector2D(val i: Short, val j: Short) {
   /**
    * <b>Equality</b>
    *
    * @param that vector to compare.
    * @return aggregated equality of the vector element pairs.
    */
-  def == (that: Vector2DArchive): Boolean = this.i == that.i & this.j == that.i
+  def == (that: ShortVector2D): Boolean = this.i == that.i & this.j == that.i
 
   /**
    * <b>Vector Addition</b>
@@ -21,7 +21,7 @@ class Vector2DArchive(val i: Int, val j: Int) {
    * @param that vector to add.
    * @return element-wise addition of the vectors.
    */
-  def + (that: Vector2DArchive): Vector2DArchive = new Vector2DArchive(this.i + that.i, this.j + that.j)
+  def + (that: ShortVector2D): ShortVector2D = new ShortVector2D((this.i + that.i).toShort, (this.j + that.j).toShort)
 
   /**
    * <b>Vector Subtraction</b>
@@ -29,7 +29,7 @@ class Vector2DArchive(val i: Int, val j: Int) {
    * @param that vector to subtract.
    * @return element-wise subtraction of the vectors.
    */
-  def -(that: Vector2DArchive): Vector2DArchive = new Vector2DArchive(this.i - that.i, this.j - that.j)
+  def -(that: ShortVector2D): ShortVector2D = new ShortVector2D((this.i - that.i).toShort, (this.j - that.j).toShort)
 
   /**
    * <b>Scalar Multiplication</b>
@@ -38,6 +38,6 @@ class Vector2DArchive(val i: Int, val j: Int) {
    * @param scalar scalar integer to multiply.
    * @return element-wise multiplication of scalar on vector.
    */
-  def * (scalar: Int) = new Vector2DArchive(this.i*scalar, this.j*scalar)
+  def * (scalar: Short) = new ShortVector2D((this.i*scalar).toShort, (this.j*scalar).toShort)
 
 }

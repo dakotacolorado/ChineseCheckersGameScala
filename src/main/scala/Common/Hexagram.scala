@@ -1,7 +1,8 @@
-package ChineseCheckersGame
+package Common
+
 /**
  * <h1>Hexagram</h1>
- * @param radius distance from the center to the inner corner.
+ * @param radius distance from the center to the inner corner (aka "inner radius").
  * @see <a href="https://en.wikipedia.org/wiki/Hexagram">Hexagram Wiki</a>
  * @author Dakota Parker
  */
@@ -30,7 +31,7 @@ class Hexagram(radius: Int = 4) {
   )
 
   /**
-   * The rhombus grid is the grid of nodes within an regular rhombus where the diagonal length is the hexagram radius.
+   * The rhombus grid is the grid of nodes within a regular rhombus where the diagonal length is the hexagram's inner radius.
    */
   //noinspection MapFlatten
   private final val rhombusGrid: Array[(Int, Int)] = (0 to this.radius).map(

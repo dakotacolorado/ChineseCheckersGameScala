@@ -1,12 +1,14 @@
-import ChineseCheckersGame.GameState.Position
-import ChineseCheckersGame.Hexagram
+import org.apache.commons.math3.geometry.euclidean.twod.Vector2D
 
-val hexagram: Hexagram = {
-  new Hexagram(10)
+class Position(var i: Short, var j: Short) extends Vector2D(i, j){
+  def + (that: Position): Position = new Position(
+    (this.i + that.i).toShort,
+    (this.j + that.j).toShort
+  )
+
 }
 
-val position: Position = new Position(1,1)
+var p = new Position(1,1)
+var q = new Position(2,2)
 
-
-
-
+p + q).i
