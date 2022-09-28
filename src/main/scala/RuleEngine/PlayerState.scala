@@ -1,5 +1,0 @@
-package RuleEngine
-
-trait PlayerState
-
-

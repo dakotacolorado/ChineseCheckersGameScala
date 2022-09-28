@@ -1,5 +1,0 @@
-package RuleEngine
-
-class RuleEngine() {
-
-}
