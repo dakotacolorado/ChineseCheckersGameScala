@@ -10,7 +10,6 @@ import Common.Hexagram
  * @param numberOfPlayers Number of players in the game.
  * @param boardSize [4] Inner radius of the hexagram board.
  * @see <a href="https://en.wikipedia.org/wiki/Chinese_checkers">Chinese Checkers Wiki</a>
- * @author Dakota Parker
  */
 class ChineseCheckersGame(val players: Array[Player], val boardSize: Int, val turn: Int) extends AbstractModule {
 
@@ -35,7 +34,6 @@ class ChineseCheckersGame(val players: Array[Player], val boardSize: Int, val tu
       boardSize,
       0
     )}
-
 
   val maxBoardSize = 100
   val maxTurn = 1000
@@ -77,7 +75,7 @@ class ChineseCheckersGame(val players: Array[Player], val boardSize: Int, val tu
     return new ChineseCheckersGame(
       players.updated(
         playerIndex,
-        players(playerIndex).applyMove(move, positionIndex)
+        players(playerIndex).makeMove(move, positionIndex)
       ),
       boardSize,
       turn + 1
